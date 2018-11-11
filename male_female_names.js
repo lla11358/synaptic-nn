@@ -1,10 +1,10 @@
 /**
-* 7 neurons for the input layer. They would represent the last 7 characters of the name.
-* 6 neurons for the hidden layer
+* 5 neurons for the input layer. They would represent the last 5 characters of the name.
+* 5 neurons for the hidden layer
 * 2 neurons for the output layer (one for male, one for female)
 */
-var INPUT_LENGTH = 7;
-var myNetwork = new synaptic.Architect.Perceptron(INPUT_LENGTH, 6, 2);
+var INPUT_LENGTH = 5;
+var myNetwork = new synaptic.Architect.Perceptron(INPUT_LENGTH, 5, 2);
 var trainingData = [];
 var trainer = new synaptic.Trainer(myNetwork);
 
@@ -100,6 +100,6 @@ for(var i = 0 ; i < 25 ; i++) {
 /**
  * Finally, test it with a few random names.
  */
-for(var i = 0; i < test_names.length; i++) {
+for(var i = 0; i < test_male_female_names.length; i++) {
     console.log("Gender of " + test_names[i] + " -> " + getGender(test_names[i]))
 }
